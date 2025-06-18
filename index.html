@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot" class="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramel Dawood | Software Developer</title>
+
+  <!-- Tailwind w/ Dark Mode Enabled -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s ease-out forwards; }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition duration-300">
+
+  <!-- Dark Mode Toggle -->
+  <div class="p-4 flex justify-end">
+    <button onclick="toggleDarkMode()" class="text-sm px-3 py-1 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">
+      🌙 Toggle Dark Mode
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white dark:bg-gray-800 shadow p-6 text-center fade-in">
+    <h1 class="text-4xl font-bold">Ramel Dawood</h1>
+    <p class="text-lg mt-2">Front-End Developer | Web Designer | IT Support Specialist</p>
+    <div class="mt-4 space-x-4">
+      <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
+      <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+      <a href="https://drive.google.com/file/d/1AZ-YEJOpAxwDwfU00wjZQS4G4yEGWH51/view?usp=sharing" target="_blank" class="text-blue-600 hover:underline">Resume (PDF)</a>
+
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="p-8 bg-gray-50 dark:bg-gray-800 fade-in" id="about">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p class="max-w-3xl text-lg">
+      I am a Computer Science student at DePaul University with hands-on experience in front-end development. Skilled in HTML, CSS, JavaScript, and React, I enjoy building responsive, accessible, and user-centered applications. I bring strong problem-solving skills, teamwork experience, and a deep interest in building software that makes an impact.
+    </p>
+    <div class="mt-4">
+      <h3 class="text-xl font-semibold">Skills</h3>
+      <div class="flex flex-wrap gap-3 mt-2">
+        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">React</span>
+        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">JavaScript</span>
+        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">Python</span>
+        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">HTML</span>
+        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">CSS</span>
+        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">Git</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="p-8 bg-white dark:bg-gray-900 fade-in" id="projects">
+    <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-semibold">Fitness & Nutrition Mobile App</h3>
+        <p class="mt-2 text-sm">Built with React Native, Firebase, and Expo. Includes workout tracking, meal logs, and AI-driven suggestions.</p>
+        <a href="https://github.com/TselepisWill/fit-tracker" target="_blank" class="text-blue-500 mt-2 inline-block">GitHub</a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-semibold">Thesaurus-Based Search Engine</h3>
+        <p class="mt-2 text-sm">
+          Python project using TF-IDF and synonym expansion for search. I implemented <code>expandQueries</code>, <code>querySyns</code>, and unit testing.
+        </p>
+        <ul class="mt-2 text-blue-500 text-sm space-y-1">
+          <li><a href="https://drive.google.com/file/d/1lzlXzB4G7LTymtsJioR3izCVJV3Ibf_I/view?usp=sharing" target="_blank">📄 Contribution PDF</a></li>
+          <li><a href="https://docs.google.com/document/d/1to_gYZB_2z7lQMBfxp7MCpU15Os3jq3y/edit?usp=sharing" target="_blank">📝 Project Proposal (Google Doc)</a></li>
+        </ul>
+      </div>
+
+      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-semibold">List Traversal Feature from Shared Design</h3>
+        <p class="mt-2 text-sm">Team-based Java project using version control and Git to develop features from a collaborative document.</p>
+        <ul class="mt-2 text-blue-500 text-sm space-y-1">
+          <li><a href="https://github.com/SE-371-475/Team-Scala-6-Repo" target="_blank">📁 Team Repo</a></li>
+          <li><a href="https://github.com/SE-371-475/NINTENDO-DIVISION" target="_blank">🎮 Nintendo Division</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="p-8 bg-gray-50 dark:bg-gray-800 fade-in" id="contact">
+    <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+    <form action="https://formsubmit.co/rameldawood2@gmail.com" method="POST" class="max-w-md space-y-4">
+      <input type="hidden" name="_subject" value="New message from portfolio site!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full border p-2 rounded dark:bg-gray-700 dark:border-gray-600">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full border p-2 rounded dark:bg-gray-700 dark:border-gray-600">
+      <textarea name="message" placeholder="Your Message" rows="5" required class="w-full border p-2 rounded dark:bg-gray-700 dark:border-gray-600"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 mt-6 text-sm text-gray-500 dark:text-gray-400 dark:bg-gray-900">
+    © 2025 Ramel Dawood |
+    <a href="https://github.com/rameldawood" target="_blank" class="text-blue-500">GitHub</a> |
+    <a href="https://linkedin.com/in/ramel-dawood-4436b6298" target="_blank" class="text-blue-500">LinkedIn</a>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.getElementById('htmlRoot').classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
