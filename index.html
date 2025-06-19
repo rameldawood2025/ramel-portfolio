@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ramel Dawood | Software Developer</title>
+  <title>Ramel Dawood | Front-End Developer</title>
 
-  <!-- Tailwind w/ Dark Mode Enabled -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = { darkMode: 'class' };
+    tailwind.config = {
+      darkMode: 'class',
+    };
   </script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     html { scroll-behavior: smooth; }
     .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s ease-out forwards; }
@@ -32,68 +32,75 @@
     <h1 class="text-4xl font-bold">Ramel Dawood</h1>
     <p class="text-lg mt-2">Front-End Developer | Web Designer | IT Support Specialist</p>
     <div class="mt-4 space-x-4">
+      <a href="#about" class="text-blue-600 hover:underline">Home</a>
       <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
-      <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
       <a href="https://drive.google.com/file/d/1AZ-YEJOpAxwDwfU00wjZQS4G4yEGWH51/view?usp=sharing" target="_blank" class="text-blue-600 hover:underline">Resume (PDF)</a>
-
+      <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
     </div>
   </header>
 
-  <!-- About -->
-  <section class="p-8 bg-gray-50 dark:bg-gray-800 fade-in" id="about">
-    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-    <p class="max-w-3xl text-lg">
-      I am a Computer Science student at DePaul University with hands-on experience in front-end development. Skilled in HTML, CSS, JavaScript, and React, I enjoy building responsive, accessible, and user-centered applications. I bring strong problem-solving skills, teamwork experience, and a deep interest in building software that makes an impact.
-    </p>
-    <div class="mt-4">
-      <h3 class="text-xl font-semibold">Skills</h3>
-      <div class="flex flex-wrap gap-3 mt-2">
-        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">React</span>
-        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">JavaScript</span>
-        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">Python</span>
-        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">HTML</span>
-        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">CSS</span>
-        <span class="px-3 py-1 rounded-full font-semibold bg-blue-400 text-blue-900 dark:bg-cyan-300 dark:text-gray-900">Git</span>
+  <!-- Hero / About -->
+  <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="about">
+    <div class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
+      <!-- Text Content -->
+      <div class="md:w-3/5">
+        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+        <p class="text-lg leading-relaxed">
+          I am a Computer Science student at DePaul University with hands-on experience in front-end development. Skilled in HTML, CSS, JavaScript, and React, I enjoy building responsive, accessible, and user-centered applications. I bring strong problem-solving skills, teamwork experience, and a deep interest in building software that makes an impact.
+        </p>
+        <div class="mt-5">
+          <h3 class="text-xl font-semibold mb-2">Skills</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-1 rounded-full font-semibold bg-blue-500 text-white">React</span>
+            <span class="px-4 py-1 rounded-full font-semibold bg-yellow-400 text-black">JavaScript</span>
+            <span class="px-4 py-1 rounded-full font-semibold bg-indigo-400 text-white">Python</span>
+            <span class="px-4 py-1 rounded-full font-semibold bg-pink-400 text-white">HTML</span>
+            <span class="px-4 py-1 rounded-full font-semibold bg-green-400 text-white">CSS</span>
+            <span class="px-4 py-1 rounded-full font-semibold bg-gray-500 text-white">Git</span>
+          </div>
+        </div>
+      </div>
+      <!-- Image -->
+      <div class="md:w-2/5 w-full flex justify-center">
+        <img src="JSON_ Essential Guide for Web Apps & APIs.jpeg" alt="Coding setup" class="rounded-xl w-full max-w-xl shadow-2xl object-cover" />
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section class="p-8 bg-white dark:bg-gray-900 fade-in" id="projects">
-    <h2 class="text-2xl font-semibold mb-6">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+  <section class="p-10 bg-white dark:bg-gray-900 fade-in" id="projects">
+    <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-semibold">Fitness & Nutrition Mobile App</h3>
         <p class="mt-2 text-sm">Built with React Native, Firebase, and Expo. Includes workout tracking, meal logs, and AI-driven suggestions.</p>
-        <a href="https://github.com/TselepisWill/fit-tracker" target="_blank" class="text-blue-500 mt-2 inline-block">GitHub</a>
+        <a href="https://github.com/TselepisWill/fit-tracker" class="text-blue-500 mt-2 inline-block">GitHub</a>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-semibold">Thesaurus-Based Search Engine</h3>
-        <p class="mt-2 text-sm">
-          Python project using TF-IDF and synonym expansion for search. I implemented <code>expandQueries</code>, <code>querySyns</code>, and unit testing.
-        </p>
-        <ul class="mt-2 text-blue-500 text-sm space-y-1">
-          <li><a href="https://drive.google.com/file/d/1lzlXzB4G7LTymtsJioR3izCVJV3Ibf_I/view?usp=sharing" target="_blank">📄 Contribution PDF</a></li>
-          <li><a href="https://docs.google.com/document/d/1to_gYZB_2z7lQMBfxp7MCpU15Os3jq3y/edit?usp=sharing" target="_blank">📝 Project Proposal (Google Doc)</a></li>
+        <p class="mt-2 text-sm">Python project using TF-IDF and synonym expansion for search.</p>
+        <ul class="mt-2 space-y-1 text-blue-500 text-sm">
+          <li><a href="https://drive.google.com/file/d/1lzlXzB4G7LTymtsJioR3izCVJV3Ibf_I/view?usp=sharing">📄 Contribution PDF</a></li>
+          <li><a href="https://docs.google.com/document/d/1to_gYZB_2z7lQMBfxp7MCpU15Os3jq3y/edit?usp=sharing">📝 Proposal Doc</a></li>
         </ul>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
-        <h3 class="text-xl font-semibold">List Traversal Feature from Shared Design</h3>
-        <p class="mt-2 text-sm">Team-based Java project using version control and Git to develop features from a collaborative document.</p>
-        <ul class="mt-2 text-blue-500 text-sm space-y-1">
-          <li><a href="https://github.com/SE-371-475/Team-Scala-6-Repo" target="_blank">📁 Team Repo</a></li>
-          <li><a href="https://github.com/SE-371-475/NINTENDO-DIVISION" target="_blank">🎮 Nintendo Division</a></li>
+      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition col-span-2">
+        <h3 class="text-xl font-semibold">List Traversal from Shared Design</h3>
+        <p class="mt-2 text-sm">Team-based Java project with version control and shared design document development.</p>
+        <ul class="mt-2 text-sm space-y-1 text-blue-500">
+          <li><a href="https://github.com/SE-371-475/Team-Scala-6-Repo">📁 Team Repo</a></li>
+          <li><a href="https://github.com/SE-371-475/NINTENDO-DIVISION">🎮 Nintendo Division</a></li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="p-8 bg-gray-50 dark:bg-gray-800 fade-in" id="contact">
-    <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-    <form action="https://formsubmit.co/rameldawood2@gmail.com" method="POST" class="max-w-md space-y-4">
+  <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="contact">
+    <h2 class="text-3xl font-semibold text-center mb-6">Contact Me</h2>
+    <form action="https://formsubmit.co/rameldawood2@gmail.com" method="POST" class="max-w-lg mx-auto space-y-4">
       <input type="hidden" name="_subject" value="New message from portfolio site!">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
@@ -105,10 +112,10 @@
   </section>
 
   <!-- Footer -->
-  <footer class="text-center p-4 mt-6 text-sm text-gray-500 dark:text-gray-400 dark:bg-gray-900">
-    © 2025 Ramel Dawood |
-    <a href="https://github.com/rameldawood" target="_blank" class="text-blue-500">GitHub</a> |
-    <a href="https://linkedin.com/in/ramel-dawood-4436b6298" target="_blank" class="text-blue-500">LinkedIn</a>
+  <footer class="text-center p-6 mt-10 text-sm text-gray-500 dark:text-gray-400 dark:bg-gray-900">
+    © 2025 Ramel Dawood · 
+    <a href="https://github.com/rameldawood" class="text-blue-500 hover:underline">GitHub</a> · 
+    <a href="https://linkedin.com/in/ramel-dawood-4436b6298" class="text-blue-500 hover:underline">LinkedIn</a>
   </footer>
 
   <script>
@@ -118,6 +125,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 
