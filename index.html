@@ -7,9 +7,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-    };
+    tailwind.config = { darkMode: 'class' };
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -33,24 +31,31 @@
     <p class="text-lg mt-2">Front-End Developer | Web Designer | IT Support Specialist</p>
     <div class="mt-4 space-x-4">
       <a href="#about" class="text-blue-600 hover:underline">Home</a>
+      <a href="#experience" class="text-blue-600 hover:underline">Experience</a>
+      <a href="#education" class="text-blue-600 hover:underline">Education</a>
       <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
       <a href="https://drive.google.com/file/d/1AZ-YEJOpAxwDwfU00wjZQS4G4yEGWH51/view?usp=sharing" target="_blank" class="text-blue-600 hover:underline">Resume (PDF)</a>
       <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
     </div>
   </header>
 
-  <!-- Hero / About -->
+  <!-- About -->
   <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="about">
     <div class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
-      <!-- Text Content -->
       <div class="md:w-3/5">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
         <p class="text-lg leading-relaxed">
           I am a Computer Science student at DePaul University with hands-on experience in front-end development. Skilled in HTML, CSS, JavaScript, and React, I enjoy building responsive, accessible, and user-centered applications. I bring strong problem-solving skills, teamwork experience, and a deep interest in building software that makes an impact.
         </p>
         <div class="mt-5">
-          <h3 class="text-xl font-semibold mb-2">Skills</h3>
-          <div class="flex flex-wrap gap-3">
+          <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
+          <div class="space-y-2 text-base">
+            <p><span class="font-semibold">Languages:</span> HTML, CSS, JavaScript, Python, Java, JSON</p>
+            <p><span class="font-semibold">Frameworks & Libraries:</span> React.js, React Native, REST APIs</p>
+            <p><span class="font-semibold">Tools:</span> Git, GitHub, Firebase, Expo, JUnit, IntelliJ, Chrome DevTools</p>
+            <p><span class="font-semibold">Concepts:</span> Responsive Web Design, Mobile UI Design, Agile Development, Unit Testing</p>
+          </div>
+          <div class="mt-4 flex flex-wrap gap-3">
             <span class="px-4 py-1 rounded-full font-semibold bg-blue-500 text-white">React</span>
             <span class="px-4 py-1 rounded-full font-semibold bg-yellow-400 text-black">JavaScript</span>
             <span class="px-4 py-1 rounded-full font-semibold bg-indigo-400 text-white">Python</span>
@@ -60,9 +65,43 @@
           </div>
         </div>
       </div>
-      <!-- Image -->
       <div class="md:w-2/5 w-full flex justify-center">
         <img src="JSON_ Essential Guide for Web Apps & APIs.jpeg" alt="Coding setup" class="rounded-xl w-full max-w-xl shadow-2xl object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="p-10 bg-white dark:bg-gray-900 fade-in" id="experience">
+    <h2 class="text-3xl font-semibold text-center mb-8">Experience</h2>
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div>
+        <h3 class="text-xl font-bold">Event Setup Assistant / A/V Technician Assistant</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Freelance Event Services — Chicago, IL · 2023 – 2025</p>
+        <ul class="mt-3 list-disc list-inside text-base space-y-1">
+          <li>Provided front-line technical support for IT and A/V systems at large-scale events.</li>
+          <li>Set up and configured hardware, network devices, and presentation software.</li>
+          <li>Diagnosed and resolved real-time technical issues, strengthening problem-solving skills.</li>
+          <li>Collaborated with engineers to optimize technical operations and improve setup efficiency.</li>
+          <li>Created technical documentation, mirroring clean coding and version control best practices.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="education">
+    <h2 class="text-3xl font-semibold text-center mb-6">Education</h2>
+    <div class="max-w-4xl mx-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+        <div>
+          <h3 class="text-xl font-bold">Bachelor of Science in Computer Science</h3>
+          <p class="italic text-gray-600 dark:text-gray-400">DePaul University</p>
+        </div>
+        <div class="text-right mt-4 md:mt-0">
+          <p class="font-semibold">Sep 2021 – Jun 2025</p>
+          <p class="italic text-gray-600 dark:text-gray-400">Chicago, IL</p>
+        </div>
       </div>
     </div>
   </section>
@@ -73,22 +112,26 @@
     <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-semibold">Fitness & Nutrition Mobile App</h3>
-        <p class="mt-2 text-sm">Built with React Native, Firebase, and Expo. Includes workout tracking, meal logs, and AI-driven suggestions.</p>
-        <a href="https://github.com/TselepisWill/fit-tracker" class="text-blue-500 mt-2 inline-block">GitHub</a>
+        <p class="mt-2 text-sm">
+          A mobile app built using React Native, Firebase, and Expo that tracks workouts, meal plans, and uses AI for personalized health suggestions. Features include authentication, logging, real-time database sync, and dynamic charts.
+        </p>
+        <a href="https://github.com/TselepisWill/fit-tracker" class="text-blue-500 mt-2 inline-block">🔗 View Code on GitHub</a>
       </div>
-
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-semibold">Thesaurus-Based Search Engine</h3>
-        <p class="mt-2 text-sm">Python project using TF-IDF and synonym expansion for search.</p>
+        <p class="mt-2 text-sm">
+          A Python-powered search engine implementing TF-IDF scoring and synonym expansion for enhanced query results. Developed custom algorithms for query parsing, expanded search terms, and implemented rigorous unit testing.
+        </p>
         <ul class="mt-2 space-y-1 text-blue-500 text-sm">
           <li><a href="https://drive.google.com/file/d/1lzlXzB4G7LTymtsJioR3izCVJV3Ibf_I/view?usp=sharing">📄 Contribution PDF</a></li>
           <li><a href="https://docs.google.com/document/d/1to_gYZB_2z7lQMBfxp7MCpU15Os3jq3y/edit?usp=sharing">📝 Proposal Doc</a></li>
         </ul>
       </div>
-
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition col-span-2">
         <h3 class="text-xl font-semibold">List Traversal from Shared Design</h3>
-        <p class="mt-2 text-sm">Team-based Java project with version control and shared design document development.</p>
+        <p class="mt-2 text-sm">
+          Collaborated in a team Java project using shared design documentation and version control practices. We implemented complex list-traversal logic based on predefined UML diagrams and followed agile development practices with GitHub.
+        </p>
         <ul class="mt-2 text-sm space-y-1 text-blue-500">
           <li><a href="https://github.com/SE-371-475/Team-Scala-6-Repo">📁 Team Repo</a></li>
           <li><a href="https://github.com/SE-371-475/NINTENDO-DIVISION">🎮 Nintendo Division</a></li>
