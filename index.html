@@ -14,9 +14,20 @@
     html { scroll-behavior: smooth; }
     .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s ease-out forwards; }
     @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    .dark * { color: white !important; }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition duration-300">
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 transition duration-300">
+
+  <!-- Social Links Top Left -->
+  <div class="absolute top-4 left-4 flex items-center gap-4 z-50">
+    <a href="https://github.com/rameldawood" target="_blank" class="flex items-center gap-2 text-blue-500 hover:text-blue-300 transition font-medium">
+      <i class="fab fa-github text-xl"></i><span class="hidden sm:inline">GitHub</span>
+    </a>
+    <a href="https://linkedin.com/in/ramel-dawood-4436b6298" target="_blank" class="flex items-center gap-2 text-blue-500 hover:text-blue-300 transition font-medium">
+      <i class="fab fa-linkedin text-xl"></i><span class="hidden sm:inline">LinkedIn</span>
+    </a>
+  </div>
 
   <!-- Dark Mode Toggle -->
   <div class="p-4 flex justify-end">
@@ -45,15 +56,15 @@
       <div class="md:w-3/5">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
         <p class="text-lg leading-relaxed">
-          I am a Computer Science student at DePaul University with hands-on experience in front-end development. Skilled in HTML, CSS, JavaScript, and React, I enjoy building responsive, accessible, and user-centered applications. I bring strong problem-solving skills, teamwork experience, and a deep interest in building software that makes an impact.
+          I am a Computer Science student at DePaul University with hands-on experience in front-end development. Skilled in HTML, CSS, JavaScript, and React, I enjoy building responsive, accessible, and user-centered applications.
         </p>
         <div class="mt-5">
           <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
           <div class="space-y-2 text-base">
-            <p><span class="font-semibold">Languages:</span> HTML, CSS, JavaScript, Python, Java, JSON</p>
-            <p><span class="font-semibold">Frameworks & Libraries:</span> React.js, React Native, REST APIs</p>
-            <p><span class="font-semibold">Tools:</span> Git, GitHub, Firebase, Expo, JUnit, IntelliJ, Chrome DevTools</p>
-            <p><span class="font-semibold">Concepts:</span> Responsive Web Design, Mobile UI Design, Agile Development, Unit Testing</p>
+            <p><strong>Languages:</strong> HTML, CSS, JavaScript, Python, Java, JSON</p>
+            <p><strong>Frameworks & Libraries:</strong> React.js, React Native, REST APIs</p>
+            <p><strong>Tools:</strong> Git, GitHub, Firebase, Expo, JUnit, IntelliJ, Chrome DevTools</p>
+            <p><strong>Concepts:</strong> Responsive Web Design, Mobile UI Design, Agile Development, Unit Testing</p>
           </div>
           <div class="mt-4 flex flex-wrap gap-3">
             <span class="px-4 py-1 rounded-full font-semibold bg-blue-500 text-white">React</span>
@@ -81,9 +92,9 @@
         <ul class="mt-3 list-disc list-inside text-base space-y-1">
           <li>Provided front-line technical support for IT and A/V systems at large-scale events.</li>
           <li>Set up and configured hardware, network devices, and presentation software.</li>
-          <li>Diagnosed and resolved real-time technical issues, strengthening problem-solving skills.</li>
-          <li>Collaborated with engineers to optimize technical operations and improve setup efficiency.</li>
-          <li>Created technical documentation, mirroring clean coding and version control best practices.</li>
+          <li>Diagnosed and resolved real-time technical issues.</li>
+          <li>Collaborated with engineers to improve setup efficiency.</li>
+          <li>Created technical documentation and supported version control practices.</li>
         </ul>
       </div>
     </div>
@@ -110,33 +121,40 @@
   <section class="p-10 bg-white dark:bg-gray-900 fade-in" id="projects">
     <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
     <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+      <!-- Project 1 -->
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-semibold">Fitness & Nutrition Mobile App</h3>
         <p class="mt-2 text-sm">
-          A mobile app built using React Native, Firebase, and Expo that tracks workouts, meal plans, and uses AI for personalized health suggestions. Features include authentication, logging, real-time database sync, and dynamic charts.
+          Built with React Native, Firebase, and Expo. Tracks workouts and nutrition with AI-based suggestions.
         </p>
         <a href="https://github.com/TselepisWill/fit-tracker" class="text-blue-500 mt-2 inline-block">🔗 View Code on GitHub</a>
       </div>
+
+      <!-- Project 2 -->
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
         <h3 class="text-xl font-semibold">Thesaurus-Based Search Engine</h3>
         <p class="mt-2 text-sm">
-          A Python-powered search engine implementing TF-IDF scoring and synonym expansion for enhanced query results. Developed custom algorithms for query parsing, expanded search terms, and implemented rigorous unit testing.
+          Python search engine using TF-IDF + synonym expansion. Fully unit-tested and efficient.
         </p>
         <ul class="mt-2 space-y-1 text-blue-500 text-sm">
           <li><a href="https://drive.google.com/file/d/1lzlXzB4G7LTymtsJioR3izCVJV3Ibf_I/view?usp=sharing">📄 Contribution PDF</a></li>
           <li><a href="https://docs.google.com/document/d/1to_gYZB_2z7lQMBfxp7MCpU15Os3jq3y/edit?usp=sharing">📝 Proposal Doc</a></li>
         </ul>
       </div>
+
+      <!-- Project 3 -->
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition col-span-2">
         <h3 class="text-xl font-semibold">List Traversal from Shared Design</h3>
         <p class="mt-2 text-sm">
-          Collaborated in a team Java project using shared design documentation and version control practices. We implemented complex list-traversal logic based on predefined UML diagrams and followed agile development practices with GitHub.
+          Team Java project based on UML documentation and Agile practices. Implemented complex traversal logic using GitHub collaboration.
         </p>
-        <ul class="mt-2 text-sm space-y-1 text-blue-500">
+        <ul class="mt-2 text-blue-500 text-sm space-y-1">
           <li><a href="https://github.com/SE-371-475/Team-Scala-6-Repo">📁 Team Repo</a></li>
           <li><a href="https://github.com/SE-371-475/NINTENDO-DIVISION">🎮 Nintendo Division</a></li>
         </ul>
       </div>
+
     </div>
   </section>
 
@@ -154,13 +172,6 @@
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center p-6 mt-10 text-sm text-gray-500 dark:text-gray-400 dark:bg-gray-900">
-    © 2025 Ramel Dawood · 
-    <a href="https://github.com/rameldawood" class="text-blue-500 hover:underline">GitHub</a> · 
-    <a href="https://linkedin.com/in/ramel-dawood-4436b6298" class="text-blue-500 hover:underline">LinkedIn</a>
-  </footer>
-
   <script>
     function toggleDarkMode() {
       document.getElementById('htmlRoot').classList.toggle('dark');
@@ -168,7 +179,6 @@
   </script>
 </body>
 </html>
-
 
 
 
