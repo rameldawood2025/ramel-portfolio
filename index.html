@@ -52,14 +52,17 @@
 
   <!-- About -->
   <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="about">
-    <div class="flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row items-start gap-10 max-w-6xl mx-auto">
+  
+      <!-- Left: Text -->
       <div class="md:w-3/5">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
         <p class="text-lg leading-relaxed">
-          Computer Science student at DePaul University with hands-on experience in front-end development and IT support. Skilled in
-          HTML, CSS, JavaScript, React.js, and troubleshooting hardware/software issues. Known for writing clean code, solving
-          problems efficiently, and contributing to smooth user experiences. Seeking a full-time role as a Front-End Developer, Web
-          Designer, IT Support Specialist, or Help Desk Technician.
+          Computer Science graduate from DePaul University with hands-on experience in
+          front-end development and IT support. Skilled in HTML, CSS, JavaScript, React.js, and
+          troubleshooting hardware/software issues. Known for writing clean code, solving
+          problems efficiently, and contributing to smooth user experiences. Seeking a full-time
+          role as a Front-End Developer, Web Designer, IT Support Specialist, or Help Desk Technician.
         </p>
         <div class="mt-5">
           <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
@@ -67,8 +70,8 @@
             <p><strong>Languages:</strong> HTML, CSS, JavaScript, Python, Java</p>
             <p><strong>Frameworks & Libraries:</strong> React.js, React Native, Tailwind CSS, Zustand, DaisyUI</p>
             <p><strong>Tools & Platforms:</strong> Git, GitHub, Firebase, Expo, IntelliJ IDEA, Chrome DevTools</p>
-            <p><strong>Web & Design Concepts:</strong> Responsive Design, RESTful APIs, Mobile UI, Agile Development, Unit Testing</p>
-            <p><strong>IT Support:</strong> Hardware Troubleshooting, Software Installation, Network Setup (LAN/Wi-Fi), Windows/macOS</p>
+            <p><strong>Web & Design Concepts:</strong> Responsive Web Design, Mobile-First Design, RESTful APIs, Agile Development, UI/UX Principles, Component-Based Architecture, Unit Testing</p>
+            <p><strong>IT Support:</strong> PC Hardware Troubleshooting, Software Installation, Network Setup (LAN/Wi-Fi), Windows/macOS Environments, A/V Equipment Support</p>
           </div>
           <div class="mt-4 flex flex-wrap gap-3">
             <span class="px-4 py-1 rounded-full font-semibold bg-blue-500 text-white">React</span>
@@ -80,9 +83,13 @@
           </div>
         </div>
       </div>
-      <div class="md:w-2/5 w-full flex justify-center">
-        <img src="JSON_ Essential Guide for Web Apps & APIs.jpeg" alt="Coding setup" class="rounded-xl w-full max-w-xl shadow-2xl object-cover" />
+  
+      <!-- Right: Vertical Stack of Images -->
+      <div class="md:w-2/5 w-full flex flex-col gap-6 items-center">
+        <img src="my_image.jpeg" alt="Ramel Dawood" class="w-[300px] h-[300px] object-cover border shadow-md" />
+        <img src="JSON_ Essential Guide for Web Apps & APIs.jpeg" alt="Developer Setup" class="w-[300px] h-[300px] object-cover border shadow-md" />
       </div>
+  
     </div>
   </section>
 
@@ -124,7 +131,7 @@
           <p class="italic text-gray-600 dark:text-gray-400">DePaul University</p>
         </div>
         <div class="text-right mt-4 md:mt-0">
-          <p class="font-semibold">Sep 2021 – Jun 2025</p>
+          <p class="font-semibold">Graduated Jun 2025</p>
           <p class="italic text-gray-600 dark:text-gray-400">Chicago, IL</p>
         </div>
       </div>
@@ -175,17 +182,21 @@
 
   <!-- Contact -->
   <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="contact">
-    <h2 class="text-3xl font-semibold text-center mb-6">Contact Me</h2>
-    <form action="https://formsubmit.co/rameldawood2@gmail.com" method="POST" class="max-w-lg mx-auto space-y-4">
-      <input type="hidden" name="_subject" value="New message from portfolio site!">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="box">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full border p-2 rounded dark:bg-gray-700 dark:border-gray-600">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full border p-2 rounded dark:bg-gray-700 dark:border-gray-600">
-      <textarea name="message" placeholder="Your Message" rows="5" required class="w-full border p-2 rounded dark:bg-gray-700 dark:border-gray-600"></textarea>
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
-    </form>
+    <h2 class="text-4xl font-bold text-center mb-8">Contact Me</h2>
+  
+    <!-- Contact Info Card -->
+    <div class="max-w-lg mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg text-center space-y-4">
+      <p class="text-lg font-semibold flex items-center justify-center gap-2">
+        <i class="fas fa-phone text-green-500"></i>
+        <a href="tel:8477578978" class="text-blue-600 hover:underline">847-757-8978</a>
+      </p>
+      <p class="text-lg font-semibold flex items-center justify-center gap-2">
+        <i class="fas fa-envelope text-red-500"></i>
+        <a href="mailto:rameldawood2@gmail.com" class="text-blue-600 hover:underline">rameldawood2@gmail.com</a>
+      </p>
+    </div>
   </section>
+  
 
   <script>
     function toggleDarkMode() {
@@ -194,6 +205,7 @@
   </script>
 </body>
 </html>
+
 
 
 
