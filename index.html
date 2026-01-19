@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" id="htmlRoot" class="">
+<html lang="en" id="htmlRoot">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ramel Dawood | Front-End Developer & IT Support</title>
+  <title>Ramel Dawood | Portfolio</title>
 
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = { darkMode: "class" };
   </script>
+
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -16,274 +19,299 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 1s ease-out forwards; }
-    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-    .dark * { color: white !important; }
+    /* Keep dark mode readable without forcing every element white */
+    body { transition: background-color 250ms ease, color 250ms ease; }
   </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 transition duration-300">
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- Dark Mode Toggle -->
-  <div class="p-4 flex justify-end">
-    <button onclick="toggleDarkMode()" class="text-sm px-3 py-1 border rounded hover:bg-gray-200 dark:hover:bg-gray-700">
-      🌙 Toggle Dark Mode
-    </button>
+  <!-- Top Bar (Toggle on the right like your screenshot) -->
+  <div class="w-full bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end">
+      <button
+        onclick="toggleDarkMode()"
+        class="text-sm px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
+      >
+        <i class="fa-solid fa-moon mr-2 text-yellow-500"></i>Toggle Dark Mode
+      </button>
+    </div>
   </div>
 
   <!-- Header -->
-  <header class="bg-white dark:bg-gray-800 shadow p-6 text-center fade-in">
-    <h1 class="text-4xl font-bold">Ramel Dawood</h1>
-    <p class="text-lg mt-2">Front-End Developer | Web Designer | IT Support Specialist</p>
+  <header class="bg-white dark:bg-gray-800 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Ramel Dawood</h1>
+      <p class="text-base md:text-lg mt-3 text-gray-700 dark:text-gray-200">
+        Entry-Level IT Support | Help Desk | Desktop Support
+      </p>
 
-    <div class="mt-4 space-x-4">
-      <a href="#about" class="text-blue-600 hover:underline">Home</a>
-      <a href="#experience" class="text-blue-600 hover:underline">Experience</a>
-      <a href="#education" class="text-blue-600 hover:underline">Education</a>
-      <a href="#projects" class="text-blue-600 hover:underline">Projects</a>
-      <a href="#certifications" class="text-blue-600 hover:underline">Certifications</a>
-      <a href="https://drive.google.com/file/d/1Gyd1_JqMS4rav5qp9q-iSu7L9qXjsmc3/view?usp=sharing"
-         target="_blank" class="text-blue-600 hover:underline" rel="noopener noreferrer">
-         Resume (PDF)
-      </a>
-      <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+      <!-- Nav (matches screenshot order/feel) -->
+      <nav class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base">
+        <a href="#about" class="text-blue-600 dark:text-blue-400 hover:underline">Home</a>
+        <a href="#experience" class="text-blue-600 dark:text-blue-400 hover:underline">Experience</a>
+        <a href="#education" class="text-blue-600 dark:text-blue-400 hover:underline">Education</a>
+        <a href="#projects" class="text-blue-600 dark:text-blue-400 hover:underline">Projects</a>
+        <a href="#certifications" class="text-blue-600 dark:text-blue-400 hover:underline">Certifications</a>
+        <a
+          href="https://drive.google.com/file/d/1Gyd1_JqMS4rav5qp9q-iSu7L9qXjsmc3/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          Resume (PDF)
+        </a>
+        <a href="#contact" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- About -->
-  <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="about">
-    <div class="flex flex-col md:flex-row items-start gap-10 max-w-6xl mx-auto">
-      <div class="md:w-3/5">
-        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-        <p class="text-lg leading-relaxed">
-          Computer Science graduate from DePaul University with hands-on experience in
-          front-end development, cloud infrastructure, and IT support. Skilled in JavaScript, React,
-          Azure, Terraform, Docker, and troubleshooting real-world systems. Passionate about building
-          clean user experiences and solving technical problems. Seeking full-time roles in Front-End Development,
-          IT Support, or Help Desk.
-        </p>
+  <!-- ABOUT (Layout like screenshot: left text + right stacked images) -->
+  <section id="about" class="bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <!-- Left -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
 
-        <div class="mt-5">
-          <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
-          <div class="space-y-2 text-base">
-            <p><strong>IT Support & Systems:</strong> Windows and macOS support, PC hardware troubleshooting, Active Directory administration, DNS fundamentals, LAN/Wi-Fi networking, virtualization, remote technical support</p>
-            <p><strong>Cloud & Infrastructure:</strong> Microsoft Azure resource management, Azure CLI, Terraform, Git/GitHub version control, cloud resource automation</p>
-            <p><strong>Development & Automation:</strong> PowerShell and Python scripting, JavaScript and SQL, React and React Native, Firebase, generative AI tools</p>
+          <!-- Keep this short + consistent with resume -->
+          <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+            Computer Science graduate from DePaul University with hands-on experience in IT support,
+            systems administration labs, and cloud fundamentals. Focused on troubleshooting, hardware/software
+            support, and building practical cloud and infrastructure skills.
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-bold mt-8 mb-3">Technical Skills</h3>
+
+          <!-- MATCHES YOUR RESUME EXACTLY -->
+          <div class="space-y-3 text-sm md:text-base text-gray-800 dark:text-gray-100">
+            <p>
+              <span class="font-bold">IT Support:</span>
+              Windows 10 and 11 support, macOS support, PC hardware and peripheral troubleshooting,
+              Active Directory user and group management, DNS fundamentals, LAN and Wi-Fi networking,
+              virtualization, remote technical support
+            </p>
+
+            <p>
+              <span class="font-bold">Cloud:</span>
+              Microsoft Azure fundamentals, virtual machines, storage, resource groups, Azure CLI, cloud resource management
+            </p>
+
+            <p>
+              <span class="font-bold">Scripting:</span>
+              PowerShell and Python scripting, basic SQL, task automation
+            </p>
+          </div>
+        </div>
+
+        <!-- Right images (same sizing/stack feel as screenshot) -->
+        <div class="flex flex-col items-center gap-8">
+          <img
+            src="my_image.jpeg"
+            alt="Ramel Dawood"
+            class="w-[360px] max-w-full h-[260px] object-cover border border-gray-200 dark:border-gray-700 shadow-md bg-white"
+          />
+          <img
+            src="JSON_ Essential Guide for Web Apps & APIs.jpeg"
+            alt="Setup"
+            class="w-[360px] max-w-full h-[260px] object-cover border border-gray-200 dark:border-gray-700 shadow-md bg-white"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Work Experience</h2>
+
+      <div class="max-w-4xl mx-auto space-y-8">
+        <!-- Role 1 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold">Hardware Technician</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Advisory Mortgage — Skokie, IL</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-300 md:text-right">July 2021 – Present</p>
+          </div>
+
+          <ul class="mt-5 list-disc list-inside space-y-2 text-sm md:text-base text-gray-800 dark:text-gray-100">
+            <li>Maintained hardware and software to support integration of loan application systems with related tools.</li>
+            <li>Diagnosed, troubleshot, and repaired issues in PC systems and software operations.</li>
+            <li>Tested and repaired microcomputers and peripherals, including hard drives, disk drives, printers, scanners, and fax machines.</li>
+          </ul>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold">Event Setup Assistant / A/V Technician Assistant</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Freelance Event Services — Chicago, IL</p>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-300 md:text-right">September 2023 – June 2025</p>
+          </div>
+
+          <ul class="mt-5 list-disc list-inside space-y-2 text-sm md:text-base text-gray-800 dark:text-gray-100">
+            <li>Provided front-line support for IT and A/V systems at large-scale events.</li>
+            <li>Set up and configured hardware, network equipment, and presentation software.</li>
+            <li>Diagnosed and resolved real-time technical issues to ensure smooth operations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Education</h2>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold">DePaul University</h3>
+              <p class="italic text-gray-600 dark:text-gray-300">Bachelor of Science in Computer Science</p>
+            </div>
+            <div class="md:text-right text-gray-700 dark:text-gray-200">
+              <p class="font-semibold">September 2021 – June 2025</p>
+              <p class="italic text-gray-600 dark:text-gray-300">Chicago, IL</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="md:w-2/5 w-full flex flex-col gap-6 items-center">
-        <img src="my_image.jpeg" alt="Ramel Dawood" class="w-[300px] h-[300px] object-cover border shadow-md" />
-        <img
-          src="JSON_ Essential Guide for Web Apps & APIs.jpeg"
-          alt="Developer Setup"
-          class="w-[300px] h-[300px] object-cover border shadow-md"
-        />
-      </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section class="p-10 bg-white dark:bg-gray-900 fade-in" id="experience">
-    <h2 class="text-3xl font-semibold text-center mb-8">Work Experience</h2>
-    <div class="max-w-4xl mx-auto space-y-8">
+  <!-- CERTIFICATIONS (2x2 cards like screenshot) -->
+  <section id="certifications" class="bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Certifications</h2>
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow">
-        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-          <h3 class="text-xl font-bold">Hardware Technician</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">Jul 2021 – Present</p>
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <h3 class="text-xl font-bold">AZ-900: Microsoft Azure Fundamentals</h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-200">Issued: November 2025</p>
         </div>
-        <p class="text-sm text-gray-500 dark:text-gray-400">Advisory Mortgage — Skokie, IL</p>
-        <ul class="mt-3 list-disc list-inside space-y-1">
-          <li>Maintained hardware and software to support integration of loan application systems with related tools.</li>
-          <li>Diagnosed, troubleshot, and repaired issues in PC systems and software operations.</li>
-          <li>Tested and repaired microcomputers and peripherals, including hard drives, disk drives, printers, scanners, and fax machines.</li>
-        </ul>
-      </div>
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow">
-        <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2">
-          <h3 class="text-xl font-bold">Event Setup Assistant / A/V Technician Assistant</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">Sep 2023 – Jun 2025</p>
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <h3 class="text-xl font-bold">AZ-104 Microsoft Azure Administrator course on Udemy</h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-200">Completed: December 2025</p>
         </div>
-        <p class="text-sm text-gray-500 dark:text-gray-400">Freelance Event Services — Chicago, IL</p>
-        <ul class="mt-3 list-disc list-inside space-y-1">
-          <li>Provided front-line support for IT and A/V systems at large-scale events.</li>
-          <li>Set up and configured hardware, network equipment, and presentation software.</li>
-          <li>Diagnosed and resolved real-time technical issues to ensure smooth operations.</li>
-        </ul>
-      </div>
 
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="education">
-    <h2 class="text-3xl font-semibold text-center mb-6">Education</h2>
-    <div class="max-w-4xl mx-auto bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-4">
-        <div>
-          <h3 class="text-xl font-bold">DePaul University</h3>
-          <p class="italic text-gray-600 dark:text-gray-400">Bachelor of Science in Computer Science</p>
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <h3 class="text-xl font-bold">Cisco Support Technician – IT Support</h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-200">Issued/Completed: January 2026</p>
         </div>
-        <div class="md:text-right">
-          <p class="font-semibold">September 2021 – June 2025</p>
-          <p class="italic text-gray-600 dark:text-gray-400">Chicago, IL</p>
+
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <h3 class="text-xl font-bold">Prompt Engineering for ChatGPT</h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-200">Issued: June 2025</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section class="p-10 bg-white dark:bg-gray-900 fade-in" id="certifications">
-    <h2 class="text-3xl font-semibold text-center mb-8">Certifications</h2>
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+  <!-- PROJECTS (ONLY the 4 projects from your resume) -->
+  <section id="projects" class="bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Projects</h2>
 
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow">
-        <h3 class="text-xl font-bold">AZ-900: Microsoft Azure Fundamentals</h3>
-        <p class="text-gray-600 dark:text-gray-400">Issued: November 2025</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+        <!-- Azure Fundamentals Hands-On Labs -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold">Azure Fundamentals Hands-On Labs</h3>
+            <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">November 2025</span>
+          </div>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+            Azure Portal · Azure CLI · Microsoft Azure
+          </p>
+          <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
+            <li>Created virtual machines, storage, and resource groups using Azure Portal and CLI</li>
+            <li>Worked through labs covering key Azure services and cloud basics</li>
+            <li>Built hands-on experience managing cloud resources and settings</li>
+          </ul>
+        </div>
+
+        <!-- Terraform -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold">Cloud Infrastructure Deployment with Terraform</h3>
+            <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">October 2025</span>
+          </div>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+            Terraform · Azure CLI · HCL · Microsoft Azure
+          </p>
+          <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
+            <li>Automated cloud setup on Microsoft Azure using Terraform and Infrastructure as Code</li>
+            <li>Deployed virtual machines, storage, and other resources with reusable code</li>
+            <li>Used Azure CLI and Git to manage deployments securely and efficiently</li>
+          </ul>
+        </div>
+
+        <!-- Active Directory Home Lab -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold">Active Directory Home Lab</h3>
+            <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">December 2025</span>
+          </div>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+            Windows Server · Active Directory · PowerShell · VirtualBox
+          </p>
+          <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
+            <li>Built a full home lab to practice real-world IT and system administration tasks.</li>
+            <li>Set up Active Directory, created and managed users and groups, and joined computers to a domain.</li>
+            <li>Used PowerShell to automate user creation and reduce manual setup work.</li>
+          </ul>
+        </div>
+
+        <!-- osTicket -->
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
+          <div class="flex items-start justify-between gap-4">
+            <h3 class="text-xl font-bold">Enterprise IT Help Desk & Ticketing System</h3>
+            <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">January 2026</span>
+          </div>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+            Linux · osTicket · DNS · SSL
+          </p>
+          <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
+            <li>Deployed an enterprise style IT help desk using osTicket on Linux</li>
+            <li>Managed tickets, users, agents, SLAs, and basic automation</li>
+            <li>Secured the system with DNS, SSL, and access controls</li>
+          </ul>
+        </div>
+
       </div>
-
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow">
-        <h3 class="text-xl font-bold">AZ-104: Microsoft Azure Administrator (Udemy Course)</h3>
-        <p class="text-gray-600 dark:text-gray-400">Completed: December 2025</p>
-      </div>
-
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow">
-        <h3 class="text-xl font-bold">Cisco Support Technician – IT Support</h3>
-        <p class="text-gray-600 dark:text-gray-400">Issued/Completed: January 2026</p>
-      </div>
-
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow">
-        <h3 class="text-xl font-bold">Prompt Engineering for ChatGPT</h3>
-        <p class="text-gray-600 dark:text-gray-400">Issued: June 2025</p>
-      </div>
-
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="p-10 bg-white dark:bg-gray-900 fade-in" id="projects">
-    <h2 class="text-3xl font-semibold text-center mb-10">Projects</h2>
+  <!-- CONTACT (matches screenshot: big title + centered card + big phone/email) -->
+  <section id="contact" class="bg-gray-100 dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10">Contact Me</h2>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 p-12 text-center">
+        <div class="space-y-8">
+          <div class="flex items-center justify-center gap-4">
+            <i class="fa-solid fa-phone text-2xl text-green-500"></i>
+            <a href="tel:8477578978" class="text-3xl md:text-4xl font-extrabold text-blue-600 dark:text-blue-400 hover:underline">
+              847-757-8978
+            </a>
+          </div>
 
-      <!-- Azure Fundamentals -->
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
-        <div class="flex justify-between items-start gap-4">
-          <h3 class="text-xl font-semibold">Azure Fundamentals Hands-On Labs</h3>
-          <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            Nov 2025 – Dec 2025
-          </span>
-        </div>
-        <p class="mt-1 text-xs text-gray-600 dark:text-gray-300">
-          Azure Portal · Azure CLI · Microsoft Azure
-        </p>
-        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
-          <li>Created virtual machines, storage, and resource groups using Azure Portal and CLI.</li>
-          <li>Worked through labs covering key Azure services and cloud basics.</li>
-          <li>Built hands-on experience managing cloud resources and settings.</li>
-        </ul>
-      </div>
-
-      <!-- Terraform -->
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
-        <div class="flex justify-between items-start gap-4">
-          <h3 class="text-xl font-semibold">Cloud Infrastructure Deployment with Terraform</h3>
-          <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            Oct 2025 – Nov 2025
-          </span>
-        </div>
-        <p class="mt-1 text-xs text-gray-600 dark:text-gray-300">
-          Terraform · Azure CLI · HCL · Microsoft Azure
-        </p>
-        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
-          <li>Automated cloud setup on Microsoft Azure using Terraform and Infrastructure as Code.</li>
-          <li>Deployed virtual machines, storage, and other resources with reusable code.</li>
-          <li>Used Azure CLI and Git to manage deployments securely and efficiently.</li>
-        </ul>
-      </div>
-
-      <!-- Active Directory -->
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
-        <div class="flex justify-between items-start gap-4">
-          <h3 class="text-xl font-semibold">Active Directory Home Lab</h3>
-          <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            Nov 2025 – Dec 2025
-          </span>
-        </div>
-        <p class="mt-1 text-xs text-gray-600 dark:text-gray-300">
-          Windows Server · Active Directory · PowerShell · VirtualBox
-        </p>
-        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
-          <li>Built a full home lab to practice real-world IT and system administration tasks.</li>
-          <li>Set up Active Directory, created and managed users and groups, and joined computers to a domain.</li>
-          <li>Used PowerShell to automate user creation and reduce manual setup work.</li>
-        </ul>
-      </div>
-
-      <!-- Full-Stack Chat App -->
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
-        <div class="flex justify-between items-start gap-4">
-          <h3 class="text-xl font-semibold">Full-Stack Chat Application</h3>
-          <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            Jul 2025 – Aug 2025
-          </span>
-        </div>
-        <p class="mt-1 text-xs text-gray-600 dark:text-gray-300">
-          React · Tailwind CSS · Zustand · DaisyUI
-        </p>
-        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
-          <li>Created a responsive chat app with signup/login using React, Tailwind CSS, and Zustand.</li>
-          <li>Designed a clean UI with DaisyUI and animated grid visuals.</li>
-          <li>Added form checks, loading states, and protected pages for a better user experience.</li>
-        </ul>
-        <div class="mt-3 space-y-1 text-sm text-blue-500">
-          <a href="https://github.com/rameldawood2025/fullstack-chat-app" target="_blank" rel="noopener noreferrer">🔗 Code</a><br />
-          <a href="https://fullstack-chat-app-yjgx.onrender.com" target="_blank" rel="noopener noreferrer">🚀 Live Demo</a>
+          <div class="flex items-center justify-center gap-4">
+            <i class="fa-solid fa-envelope text-2xl text-red-500"></i>
+            <a href="mailto:rameldawood2@gmail.com" class="text-2xl md:text-3xl font-extrabold text-blue-600 dark:text-blue-400 hover:underline break-all">
+              rameldawood2@gmail.com
+            </a>
+          </div>
         </div>
       </div>
-
-      <!-- AI Fitness App -->
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-xl transition">
-        <div class="flex justify-between items-start gap-4">
-          <h3 class="text-xl font-semibold">AI-Powered Fitness & Nutrition Mobile App</h3>
-          <span class="text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
-            Apr 2025 – Jun 2025
-          </span>
-        </div>
-        <p class="mt-1 text-xs text-gray-600 dark:text-gray-300">
-          React Native · JavaScript · Firebase · Expo
-        </p>
-        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
-          <li>Built a mobile app to log workouts, meals, and track progress.</li>
-          <li>Implemented login, goals, and AI fitness tips.</li>
-          <li>Led responsive UI design across screen sizes.</li>
-        </ul>
-        <a href="https://github.com/TselepisWill/fit-tracker"
-           target="_blank"
-           class="text-blue-500 text-sm mt-2 inline-block"
-           rel="noopener noreferrer">
-          🔗 View Code
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact (matches your second screenshot style) -->
-  <section class="p-10 bg-gray-50 dark:bg-gray-800 fade-in" id="contact">
-    <h2 class="text-4xl font-bold text-center mb-8">Contact Me</h2>
-    <div class="max-w-2xl mx-auto p-10 bg-white dark:bg-gray-900 rounded-lg shadow-lg text-center space-y-6">
-      <p class="text-2xl font-semibold flex items-center justify-center gap-3">
-        <i class="fas fa-phone text-green-500"></i>
-        <a href="tel:8477578978" class="text-blue-600 hover:underline">847-757-8978</a>
-      </p>
-      <p class="text-2xl font-semibold flex items-center justify-center gap-3">
-        <i class="fas fa-envelope text-red-500"></i>
-        <a href="mailto:rameldawood2@gmail.com" class="text-blue-600 hover:underline">rameldawood2@gmail.com</a>
-      </p>
     </div>
   </section>
 
@@ -291,9 +319,9 @@
     function toggleDarkMode() {
       const html = document.getElementById("htmlRoot");
       html.classList.toggle("dark");
-      const isDark = html.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+      localStorage.setItem("theme", html.classList.contains("dark") ? "dark" : "light");
     }
+
     window.onload = () => {
       if (localStorage.getItem("theme") === "dark") {
         document.getElementById("htmlRoot").classList.add("dark");
