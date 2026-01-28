@@ -19,14 +19,13 @@
 
   <style>
     html { scroll-behavior: smooth; }
-    /* Keep dark mode readable without forcing every element white */
     body { transition: background-color 250ms ease, color 250ms ease; }
   </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- Top Bar (Toggle on the right like your screenshot) -->
+  <!-- Top Bar (Toggle on the right) -->
   <div class="w-full bg-gray-100 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end">
       <button
@@ -46,7 +45,7 @@
         Entry-Level IT Support | Help Desk | Desktop Support
       </p>
 
-      <!-- Nav (matches screenshot order/feel) -->
+      <!-- Nav -->
       <nav class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base">
         <a href="#about" class="text-blue-600 dark:text-blue-400 hover:underline">Home</a>
         <a href="#experience" class="text-blue-600 dark:text-blue-400 hover:underline">Experience</a>
@@ -66,7 +65,7 @@
     </div>
   </header>
 
-  <!-- ABOUT (Layout like screenshot: left text + right stacked images) -->
+  <!-- ABOUT (Left text + right circular photo) -->
   <section id="about" class="bg-gray-100 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <div class="grid md:grid-cols-2 gap-10 items-start">
@@ -74,7 +73,6 @@
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
 
-          <!-- Keep this short + consistent with resume -->
           <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200">
             Computer Science graduate from DePaul University with hands-on experience in IT support,
             systems administration labs, and cloud fundamentals. Focused on troubleshooting, hardware/software
@@ -83,7 +81,6 @@
 
           <h3 class="text-xl md:text-2xl font-bold mt-8 mb-3">Technical Skills</h3>
 
-          <!-- MATCHES YOUR RESUME EXACTLY -->
           <div class="space-y-3 text-sm md:text-base text-gray-800 dark:text-gray-100">
             <p>
               <span class="font-bold">IT Support:</span>
@@ -104,18 +101,15 @@
           </div>
         </div>
 
-        <!-- Right images (same sizing/stack feel as screenshot) -->
-        <div class="flex flex-col items-center gap-8">
-          <img
-            src="my_image.jpeg"
-            alt="Ramel Dawood"
-            class="w-[360px] max-w-full h-[260px] object-cover border border-gray-200 dark:border-gray-700 shadow-md bg-white"
-          />
-          <img
-            src="JSON_ Essential Guide for Web Apps & APIs.jpeg"
-            alt="Setup"
-            class="w-[360px] max-w-full h-[260px] object-cover border border-gray-200 dark:border-gray-700 shadow-md bg-white"
-          />
+        <!-- Right (Circular headshot only) -->
+        <div class="flex flex-col items-center md:items-end">
+          <div class="w-[280px] h-[280px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 shadow-md bg-white">
+            <img
+              src="my_image.jpeg"
+              alt="Ramel Dawood"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -186,7 +180,7 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS (2x2 cards like screenshot) -->
+  <!-- CERTIFICATIONS -->
   <section id="certifications" class="bg-white dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Certifications</h2>
@@ -210,7 +204,7 @@
     </div>
   </section>
 
-  <!-- PROJECTS (ONLY the 4 projects from your resume) -->
+  <!-- PROJECTS -->
   <section id="projects" class="bg-gray-100 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Projects</h2>
@@ -265,19 +259,19 @@
           </ul>
         </div>
 
-        <!-- osTicket -->
+        <!-- ServiceNow -->
         <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-xl font-bold">Enterprise IT Help Desk & Ticketing System</h3>
+            <h3 class="text-xl font-bold">IT Help Desk & Ticketing System Lab</h3>
             <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">January 2026</span>
           </div>
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-            Linux · osTicket · DNS · SSL
+            ServiceNow · Incident Management · Knowledge Base
           </p>
           <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
-            <li>Deployed an enterprise style IT help desk using osTicket on Linux</li>
-            <li>Managed tickets, users, agents, SLAs, and basic automation</li>
-            <li>Secured the system with DNS, SSL, and access controls</li>
+            <li>Built a ServiceNow help desk lab to manage IT tickets from creation to resolution.</li>
+            <li>Resolved common issues including password resets, access requests, and service catalog items.</li>
+            <li>Configured notifications, ACLs, workflows, and knowledge based articles.</li>
           </ul>
         </div>
 
@@ -285,7 +279,7 @@
     </div>
   </section>
 
-  <!-- CONTACT (matches screenshot: big title + centered card + big phone/email) -->
+  <!-- CONTACT -->
   <section id="contact" class="bg-gray-100 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-16">
       <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10">Contact Me</h2>
