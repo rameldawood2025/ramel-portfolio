@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ramel Dawood | Portfolio</title>
+  <title>Ramel Dawood | Web Developer Portfolio</title>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,9 +25,35 @@
 
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- Top Bar (Toggle on the right) -->
+  <!-- Top Bar (Icons on the left + Toggle on the right) -->
   <div class="w-full bg-gray-100 dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-end">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Left: Social Icons -->
+      <div class="flex items-center gap-4 text-xl">
+        <a
+          href="https://www.linkedin.com/in/ramel-dawood-4436b6298/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition transform hover:scale-110 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+          aria-label="LinkedIn"
+          title="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a
+          href="https://github.com/rameldawood2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition transform hover:scale-110 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+          aria-label="GitHub"
+          title="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Right: Dark Mode Toggle -->
       <button
         onclick="toggleDarkMode()"
         class="text-sm px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 shadow-sm"
@@ -42,30 +68,31 @@
     <div class="max-w-6xl mx-auto px-4 py-10 text-center">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Ramel Dawood</h1>
       <p class="text-base md:text-lg mt-3 text-gray-700 dark:text-gray-200">
-        Entry-Level IT Support | Help Desk | Desktop Support
+        Entry-Level Web Developer | Front-End / Full-Stack (React, Node, Firebase)
       </p>
 
-      <!-- Nav -->
-      <nav class="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base">
-        <a href="#about" class="text-blue-600 dark:text-blue-400 hover:underline">Home</a>
-        <a href="#experience" class="text-blue-600 dark:text-blue-400 hover:underline">Experience</a>
-        <a href="#education" class="text-blue-600 dark:text-blue-400 hover:underline">Education</a>
-        <a href="#projects" class="text-blue-600 dark:text-blue-400 hover:underline">Projects</a>
-        <a href="#certifications" class="text-blue-600 dark:text-blue-400 hover:underline">Certifications</a>
+      <!-- Nav (Separate Pages) -->
+      <nav class="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base">
+        <a href="index.html" class="text-blue-600 dark:text-blue-400 hover:underline">Home</a>
+        <a href="skills.html" class="text-blue-600 dark:text-blue-400 hover:underline">Skills</a>
+        <a href="projects.html" class="text-blue-600 dark:text-blue-400 hover:underline">Projects</a>
+        <a href="experience.html" class="text-blue-600 dark:text-blue-400 hover:underline">Experience</a>
+        <a href="education.html" class="text-blue-600 dark:text-blue-400 hover:underline">Education</a>
+        <a href="certifications.html" class="text-blue-600 dark:text-blue-400 hover:underline">Certifications</a>
         <a
-          href="https://drive.google.com/file/d/1Gyd1_JqMS4rav5qp9q-iSu7L9qXjsmc3/view?usp=sharing"
+          href="https://drive.google.com/file/d/1BsbBWeP8SUrhlWOQ009HY04sB8905HKh/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           class="text-blue-600 dark:text-blue-400 hover:underline"
         >
           Resume (PDF)
         </a>
-        <a href="#contact" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a>
+        <a href="contact.html" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ABOUT (Left text + right circular photo) -->
+  <!-- HOME / ABOUT ONLY -->
   <section id="about" class="bg-gray-100 dark:bg-gray-900">
     <div class="max-w-6xl mx-auto px-4 py-14">
       <div class="grid md:grid-cols-2 gap-10 items-start">
@@ -73,30 +100,26 @@
         <div>
           <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
 
-          <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200">
-            Computer Science graduate from DePaul University with hands-on experience in IT support,
-            systems administration labs, and cloud fundamentals. Focused on troubleshooting, hardware/software
-            support, and building practical cloud and infrastructure skills.
+          <p class="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200 max-w-2xl">
+            I’m a Computer Science graduate from DePaul University focused on building modern, responsive web applications.
+            I specialize in creating clean, user-friendly interfaces with React and Tailwind CSS, and I have experience
+            developing full-stack features using Node.js, Express, and Firebase. I’m passionate about writing maintainable
+            code and delivering intuitive web experiences.
           </p>
 
-          <h3 class="text-xl md:text-2xl font-bold mt-8 mb-3">Technical Skills</h3>
+          <!-- Tech Pills (COLORED) -->
+          <div class="mt-7 flex flex-wrap gap-3">
+            <span class="text-xs md:text-sm px-4 py-1.5 rounded-full font-medium bg-blue-500/10 text-blue-500 border border-blue-500/30">React</span>
+            <span class="text-xs md:text-sm px-4 py-1.5 rounded-full font-medium bg-blue-600/10 text-blue-600 border border-blue-600/30">TypeScript</span>
+            <span class="text-xs md:text-sm px-4 py-1.5 rounded-full font-medium bg-cyan-500/10 text-cyan-500 border border-cyan-500/30">Tailwind CSS</span>
+            <span class="text-xs md:text-sm px-4 py-1.5 rounded-full font-medium bg-green-500/10 text-green-500 border border-green-500/30">Node.js</span>
+            <span class="text-xs md:text-sm px-4 py-1.5 rounded-full font-medium bg-purple-500/10 text-purple-500 border border-purple-500/30">SQL</span>
+            <span class="text-xs md:text-sm px-4 py-1.5 rounded-full font-medium bg-yellow-500/10 text-yellow-500 border border-yellow-500/30">Firebase</span>
+          </div>
 
-          <div class="space-y-3 text-sm md:text-base text-gray-800 dark:text-gray-100">
-            <p>
-              <span class="font-bold">IT Support:</span>
-              Windows/macOS support, hardware troubleshooting,
-              Active Directory, ServiceNow, networking, remote support
-            </p>
-
-            <p>
-              <span class="font-bold">Cloud:</span>
-              Microsoft Azure, virtual machines, storage, resource groups, Azure CLI, Terraform, infrastructure as code
-            </p>
-
-            <p>
-              <span class="font-bold">Scripting:</span>
-              PowerShell, Python, SQL fundamentals, Power Automate, OpenAI API integration
-            </p>
+          <div class="mt-8 text-sm md:text-base text-gray-700 dark:text-gray-200">
+            <p class="font-semibold">Looking for:</p>
+            <p>Front-End Developer • Full-Stack Developer • Web Developer (Entry-Level)</p>
           </div>
         </div>
 
@@ -108,212 +131,6 @@
               alt="Ramel Dawood"
               class="w-full h-full object-cover object-top"
             />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="bg-white dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Work Experience</h2>
-
-      <div class="max-w-4xl mx-auto space-y-8">
-        <!-- Role 1 -->
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-            <div>
-              <h3 class="text-xl md:text-2xl font-bold">Hardware Technician</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-300">Advisory Mortgage — Skokie, IL</p>
-            </div>
-            <p class="text-sm text-gray-600 dark:text-gray-300 md:text-right">July 2021 – Present</p>
-          </div>
-
-          <ul class="mt-5 list-disc list-inside space-y-2 text-sm md:text-base text-gray-800 dark:text-gray-100">
-            <li>Maintained hardware and software to support integration of loan application systems with related tools.</li>
-            <li>Diagnosed, troubleshot, and repaired issues in PC systems and software operations.</li>
-            <li>Tested and repaired microcomputers and peripherals, including hard drives, disk drives, printers, scanners, and fax machines.</li>
-          </ul>
-        </div>
-
-        <!-- Role 2 -->
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-            <div>
-              <h3 class="text-xl md:text-2xl font-bold">Event Setup Assistant / A/V Technician Assistant</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-300">Freelance Event Services — Chicago, IL</p>
-            </div>
-            <p class="text-sm text-gray-600 dark:text-gray-300 md:text-right">September 2023 – June 2025</p>
-          </div>
-
-          <ul class="mt-5 list-disc list-inside space-y-2 text-sm md:text-base text-gray-800 dark:text-gray-100">
-            <li>Provided front-line support for IT and A/V systems at large-scale events.</li>
-            <li>Set up and configured hardware, network equipment, and presentation software.</li>
-            <li>Diagnosed and resolved real-time technical issues to ensure smooth operations.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="bg-gray-100 dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Education</h2>
-
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
-            <div>
-              <h3 class="text-xl md:text-2xl font-bold">DePaul University</h3>
-              <p class="italic text-gray-600 dark:text-gray-300">Bachelor of Science in Computer Science</p>
-            </div>
-            <div class="md:text-right text-gray-700 dark:text-gray-200">
-              <p class="font-semibold">September 2021 – June 2025</p>
-              <p class="italic text-gray-600 dark:text-gray-300">Chicago, IL</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section id="certifications" class="bg-white dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Certifications</h2>
-
-      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-          <h3 class="text-xl font-bold">AZ-900: Microsoft Azure Fundamentals</h3>
-          <p class="mt-2 text-gray-700 dark:text-gray-200">Issued: November 2025</p>
-        </div>
-
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-          <h3 class="text-xl font-bold">AZ-104 Microsoft Azure Administrator course on Udemy</h3>
-          <p class="mt-2 text-gray-700 dark:text-gray-200">Completed: December 2025</p>
-        </div>
-
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-          <h3 class="text-xl font-bold">Prompt Engineering for ChatGPT</h3>
-          <p class="mt-2 text-gray-700 dark:text-gray-200">Issued: June 2025</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-<section id="projects" class="bg-gray-100 dark:bg-gray-900">
-  <div class="max-w-6xl mx-auto px-4 py-14">
-    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">Projects</h2>
-
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-      <!-- AI Help Desk Assistant -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-xl font-bold">AI-Powered IT Help Desk Assistant</h3>
-          <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">February 2026</span>
-        </div>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          Power Apps · Power Automate · OpenAI API
-        </p>
-        <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
-          <li>Built an AI help desk chatbot using Power Apps and Power Automate.</li>
-          <li>Integrated the OpenAI API to generate troubleshooting steps and ticket summaries.</li>
-          <li>Automated request routing by issue type to improve support response time.</li>
-        </ul>
-      </div>
-
-      <!-- ServiceNow -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-xl font-bold">IT Help Desk & Ticketing System Lab</h3>
-          <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">January 2026</span>
-        </div>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          ServiceNow · Incident Management · Knowledge Base
-        </p>
-        <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
-          <li>Built a ServiceNow help desk lab to manage IT tickets from creation to resolution.</li>
-          <li>Simulated help desk requests including password resets, access requests, and service catalog items.</li>
-          <li>Configured notifications, ACLs, workflows, and knowledge base articles.</li>
-        </ul>
-      </div>
-
-      <!-- Active Directory Home Lab -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-xl font-bold">Active Directory Home Lab</h3>
-          <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">December 2025</span>
-        </div>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          Windows Server · Active Directory · PowerShell · VirtualBox
-        </p>
-        <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
-          <li>Built a full home lab to practice real-world IT and system administration tasks.</li>
-          <li>Set up Active Directory, created and managed users and groups, and joined computers to a domain.</li>
-          <li>Used PowerShell to automate user creation and reduce manual setup work.</li>
-        </ul>
-      </div>
-
-      <!-- Azure Fundamentals Hands-On Labs -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-xl font-bold">Azure Fundamentals Hands-On Labs</h3>
-          <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">November 2025</span>
-        </div>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          Azure Portal · Azure CLI · Microsoft Azure
-        </p>
-        <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
-          <li>Created virtual machines, storage, and resource groups using Azure Portal and CLI.</li>
-          <li>Worked through labs covering key Azure services and cloud basics.</li>
-          <li>Built hands-on experience managing cloud resources and settings.</li>
-        </ul>
-      </div>
-
-      <!-- Terraform -->
-      <div class="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-8">
-        <div class="flex items-start justify-between gap-4">
-          <h3 class="text-xl font-bold">Cloud Infrastructure Deployment with Terraform</h3>
-          <span class="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">October 2025</span>
-        </div>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          Terraform · Azure CLI · HCL · Microsoft Azure
-        </p>
-        <ul class="mt-5 list-disc list-inside space-y-2 text-sm text-gray-800 dark:text-gray-100">
-          <li>Automated cloud setup on Microsoft Azure using Terraform and Infrastructure as Code.</li>
-          <li>Deployed virtual machines, storage, and other resources with reusable code.</li>
-          <li>Used Azure CLI and Git to manage deployments securely and efficiently.</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-  <!-- CONTACT -->
-  <section id="contact" class="bg-gray-100 dark:bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10">Contact Me</h2>
-
-      <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 p-12 text-center">
-        <div class="space-y-8">
-          <div class="flex items-center justify-center gap-4">
-            <i class="fa-solid fa-phone text-2xl text-green-500"></i>
-            <a href="tel:8477578978" class="text-3xl md:text-4xl font-extrabold text-blue-600 dark:text-blue-400 hover:underline">
-              847-757-8978
-            </a>
-          </div>
-
-          <div class="flex items-center justify-center gap-4">
-            <i class="fa-solid fa-envelope text-2xl text-red-500"></i>
-            <a href="mailto:rameldawood2@gmail.com" class="text-2xl md:text-3xl font-extrabold text-blue-600 dark:text-blue-400 hover:underline break-all">
-              rameldawood2@gmail.com
-            </a>
           </div>
         </div>
       </div>
@@ -336,6 +153,15 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 
